@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cát Tường - Portfolio</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="text-on-surface antialiased relative selection:bg-primary-container selection:text-white">
+
+    <div id="particles-container"></div>
+
+    <nav class="docked full-width top-0 sticky z-50 bg-transparent backdrop-blur-md bg-glass-white/30 dark:bg-surface-container/30 transition-transform duration-300">
+        <div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+            <a class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed-dim tracking-tight" href="#">LNCT</a>
+            <ul class="hidden md:flex gap-8 items-center">
+                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 inline-block" href="#about">About</a></li>
+                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-105 inline-block" href="#style">Style</a></li>
+                <li><a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20 relative z-10 flex flex-col items-center">
+        
+        <section class="relative flex flex-col items-center justify-center text-center mb-32 pt-10 w-full" id="hero">
+            <div class="relative w-48 h-48 md:w-64 md:h-64 mb-8 mx-auto">
+                <img alt="Portrait" class="w-full h-full object-cover rounded-full border-8 border-white shadow-soft-ambient relative z-10" src="1.jpg" />
+                <div class="absolute -top-4 -right-4 text-4xl sticker animate-float" style="animation-delay: 0s;">🌼</div>
+                <div class="absolute top-1/2 -left-8 text-2xl sticker animate-float" style="animation-delay: 1s;">⭐</div>
+                <div class="absolute bottom-4 -right-6 text-3xl sticker animate-float" style="animation-delay: 2s;">✨</div>
+                <svg class="absolute -bottom-8 -left-12 w-24 h-24 text-primary-container z-0 opacity-70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 100 100">
+                    <path d="M10,50 Q30,10 50,50 T90,50"></path>
+                </svg>
+            </div>
+            <div class="space-y-4 flex flex-col items-center justify-center">
+                <h1 class="font-name-cute text-text-main text-center">Lê Nguyễn Cát Tường</h1>
+                <p class="font-handwritten-note text-handwritten-note text-primary-container rotate-[-2deg] text-center">Economic Mathematics</p>
+                <a class="inline-block mt-6 px-8 py-3 bg-primary-container text-white font-label-sm text-label-sm rounded-full shadow-soft-ambient hover:scale-105 transition-transform duration-300 mx-auto" href="#explore">
+                    Explore →
+                </a>
+            </div>
+
+            <div class="mt-14 bg-white/40 border border-white/40 backdrop-blur-md rounded-xl p-4 w-full max-w-[350px] shadow-[0_10px_25px_rgba(240,221,215,0.6)] group/player transition-all duration-300 hover:-translate-y-1 mx-auto">
+                <div class="flex items-center gap-4 mb-3">
+                    <img alt="Album Art" class="w-14 h-14 rounded-md object-cover shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoJSq18ZRDgKaAcY60DA4iLuJau4aAU6Vh0RALci7jJkIn5fdB9vzJamcJWN0byqVp-zwLbuBhE_xHzWkfAcQ0aYtKpvdtMbTLt7iyjNOFBEARz-AyH0yvVaRkZMYiTgQFrGJtkRGLvjJjLdD8Y-Vw-dL6dMtnOXpctFxKpTnNNVlJgFvedqErcpo0QLOeUuoYqM5yLkzjXkchIr9Oaoi2_dbg_8f_8K2dgG-QeXNVjecQinMEd_dmGfa6Ot_K1mnTaStP5XcVvMWR"/>
+                    <div class="flex-grow text-left min-w-0">
+                        <h4 class="text-text-main text-sm font-semibold truncate hover:underline cursor-pointer">Midnight Focus</h4>
+                        <p class="text-text-muted text-xs truncate hover:text-text-main hover:underline cursor-pointer">Study Playlist</p>
+                    </div>
+                    <button class="text-text-muted hover:text-primary-container transition-colors flex-shrink-0">
+                        <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 0, 'wght' 300;">favorite</span>
+                    </button>
+                </div>
+                
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-center items-center gap-3 text-text-main">
+                        <button class="hover:text-primary-container transition-colors p-1" id="backward-10s" title="Tua lùi 10s"><span class="material-symbols-outlined text-xl">replay_10</span></button>
+                        <button class="hover:text-primary-container transition-colors p-1" title="Bài trước"><span class="material-symbols-outlined text-xl">skip_previous</span></button>
+                        <button class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-200 shadow-sm" title="Play"><span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1, 'wght' 500;">play_arrow</span></button>
+                        <button class="hover:text-primary-container transition-colors p-1" title="Bài tiếp theo"><span class="material-symbols-outlined text-xl">skip_next</span></button>
+                        <button class="hover:text-primary-container transition-colors p-1" id="forward-10s" title="Tua tiến 10s"><span class="material-symbols-outlined text-xl">forward_10</span></button>
+                    </div>
+                    <div class="flex items-center gap-2 text-[10px] text-text-muted font-mono select-none">
+                        <span>0:45</span>
+                        <input type="range" id="spotify-progress" class="w-full h-[4px]" min="0" max="100" value="33">
+                        <span>3:12</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 relative bg-floral-white bg-notebook-pattern bg-[length:20px_20px] rounded-3xl shadow-soft-ambient mb-32 w-full text-center flex flex-col items-center justify-center" id="about">
+            <div class="max-w-3xl mx-auto px-8 flex flex-col items-center justify-center gap-8 relative z-10 w-full">
+                <div class="absolute top-0 left-6 text-4xl sticker animate-float" style="animation-delay: 0.2s;">📚</div>
+                <div class="absolute bottom-0 right-6 text-5xl sticker animate-float" style="animation-delay: 1.5s;">🐮</div>
+                <div class="absolute top-1/2 left-10 text-3xl sticker animate-fly" style="animation-delay: 0.5s;">🕊️</div>
+                <div class="absolute bottom-10 left-10 text-4xl sticker animate-float" style="animation-delay: 2s;">🌸</div>
+
+                <div class="space-y-6 flex flex-col items-center text-center w-full">
+                    <h2 class="font-headline-lg text-headline-lg text-text-main inline-block relative mx-auto">
+                        ABOUT ME 📚
+                        <svg class="absolute -bottom-2 left-0 w-full h-3 text-primary-container opacity-60" fill="none" preserveaspectratio="none" stroke="currentColor" stroke-linecap="round" stroke-width="4" viewbox="0 0 100 20">
+                            <path d="M0,10 Q50,0 100,10"></path>
+                        </svg>
+                    </h2>
+                    <h3 class="font-name-cute text-4xl text-primary-container text-center">Lê Nguyễn Cát Tường</h3>
+                    <p class="font-handwritten-note text-2xl text-text-muted text-center">Economic Mathematics</p>
+                    <p class="font-body-md text-text-main leading-relaxed max-w-2xl text-center mx-auto">
+                        Hello! I'm an Economic Mathematics student passionate about blending analytical thinking with a soft, creative aesthetic. I believe that even the most complex equations can be beautiful when viewed from the right perspective. Welcome to my little corner of the internet where logic meets art.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 relative w-full text-center flex flex-col items-center justify-center overflow-hidden" id="style">
+            <div class="text-center mb-12 relative z-10 w-full">
+                <h2 class="font-headline-lg text-headline-lg text-text-main inline-block relative mx-auto">
+                    MY STYLE <span class="absolute -top-4 -right-6 text-2xl rotate-[15deg]">📷</span>
+                </h2>
+            </div>
+            
+            <div class="flex flex-col items-center justify-center perspective-1500 w-full px-4 py-8">
+                <div class="book-container group" id="interactive-album">
+                    
+                    <div class="book-page-base-left shadow-inner" id="base-left"></div>
+                    <div class="book-page-base-right shadow-inner" id="base-right"></div>
+
+                    <div class="album-page" id="page-3" style="z-index: 10;">
+                        <div class="polaroid-frame rotate-[2deg] hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+                            <img alt="Beautiful moments" class="w-full aspect-square object-cover shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0aeZFKgnQc_-K8qLJc1BBiG5bXNMlCENd4mBUEMXCVcivaa7Oc4_8vwwpZ3sYQLD5xdBNy9nWN60CnRdO77CYX06vMj60HAoQKtTdrwNXK-0LYvOrUQ3s0s0q3oL5Ao3_V_2xi-YKTTEAUDvP2vRBu61VzB-9eZQXCMVvlaaqpM805I854eDaSR5bkrUvP4SxWIOGLmFHbHeaHBtTjAkQs20tGXAdrDLScyuDwL8mmD0Hl-Ae5xd2yFp6L9-8Si-vut6W0IMWnTXZ" />
+                            <p class="font-handwritten-note text-center text-[#777777] mt-2 text-[1.5vw] sm:text-[14px]">Beautiful moments</p>
+                            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-[20%] h-[6%] bg-white/50 backdrop-blur-sm border border-gray-200 shadow-sm rotate-[-3deg]"></div>
+                        </div>
+                    </div>
+
+                    <div class="album-page" id="page-2" style="z-index: 20;">
+                        <div class="polaroid-frame rotate-[-3deg] hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+                            <img alt="Warm afternoon" class="w-full aspect-square object-cover shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGJ0kEUODmKTpL2-Yh6gUPCrikLWDVsBMnTdStdzUao2nybIRuH83WnU2jwlACywjzK6gzoVIig10jFveEfBrm9RJKLz-VLTa5L8OZe1prSu4iipNuiTkyUFEiz2RaU5w-MjkiS7BHWVhYJae-3j0o3CqvxOSpIn4d8cufepxWnRNuHx5QpOcu8499LT1UCKfAz1Geiml8SqCJoOC8kIDrtRtQIE80RGAy1vTc4eEqxrkWeRR0spomh-imVCQbuxDhuoLOAPRcQsyU" />
+                            <p class="font-handwritten-note text-center text-[#777777] mt-2 text-[1.5vw] sm:text-[14px]">Warm afternoon</p>
+                            <div class="absolute -top-[6%] right-[4%] text-[3vw] sm:text-[24px] rotate-[15deg]">🌸</div>
+                        </div>
+                    </div>
+
+                    <div class="album-page" id="page-1" style="z-index: 30;">
+                        <div class="polaroid-frame rotate-[1deg] hover:scale-105 transition-transform duration-300 flex flex-col items-center">
+                            <img alt="A little memory" class="w-full aspect-square object-cover shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBovGrlHE7CebLQhm8v5yF57e-ZFPqXTnoTl4goy7b0SeZ2renWRQw4Jj-F4by2f9PGSUJZ64WBuc5etPimJVoiOAu88wQlBP29y_X3UQMIT2HZdPe2r0eL5arWwHdHaCZezmH_z5haDI1InQQseNcQz8blUE14DU4qjpTlYcfHgS1fFc95jka-tH_-PLFS4FI2uD2BWTU4rULUh8E71AK2W7RNwrcSgqoTGFm9gKA2dTLFpfjFlajr5UwWe4cSTOV1CE2HwmwOrVo_" />
+                            <p class="font-handwritten-note text-center text-[#777777] mt-2 text-[1.5vw] sm:text-[14px]">A little memory</p>
+                            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-[20%] h-[6%] bg-white/50 backdrop-blur-sm border border-gray-200 shadow-sm rotate-[2deg]"></div>
+                        </div>
+                    </div>
+
+                    <div class="album-cover bg-[#7BAE7F] rounded-r-xl shadow-2xl flex items-center justify-center border-l-4 border-[#5A875D]" id="cover" style="z-index: 40;">
+                        <div class="flex flex-col items-center justify-center p-4">
+                            <span class="font-headline-lg text-[6vw] sm:text-[45px] text-white mb-3 drop-shadow-md text-center selection:bg-transparent">MY STYLE</span>
+                            <span class="font-label-sm text-[1.8vw] sm:text-[10px] text-white/80 bg-black/20 px-3 py-1.5 rounded-full uppercase tracking-widest backdrop-blur-sm text-center select-none">Click to Open</span>
+                        </div>
+                        <div class="absolute left-0 top-0 bottom-0 w-[4%] shadow-album-spine pointer-events-none"></div>
+                    </div>
+
+                </div>
+                
+                <div class="mt-8 font-label-sm text-text-muted tracking-widest uppercase text-center select-none">
+                    ← Click Right Side To Turn Page Left →
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 relative bg-floral-white bg-notebook-pattern bg-[length:20px_20px] w-full text-center flex flex-col items-center justify-center" id="contact">
+            <div class="absolute top-10 left-[10%] text-3xl sticker animate-float" style="animation-delay: 0.5s;">🌼</div>
+            <div class="absolute top-20 right-[15%] text-2xl sticker animate-float" style="animation-delay: 1.2s;">⭐</div>
+            <div class="absolute bottom-32 left-[20%] text-4xl sticker animate-float" style="animation-delay: 0.8s;">📚</div>
+            <div class="absolute top-1/2 right-[10%] text-3xl sticker animate-float" style="animation-delay: 2s;">🕊️</div>
+            <div class="absolute bottom-10 right-[25%] text-4xl sticker animate-float" style="animation-delay: 1.5s;">☁️</div>
+
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 w-full flex flex-col items-center justify-center">
+                <div class="text-center mb-16 w-full">
+                    <h2 class="font-headline-lg text-headline-lg text-text-main inline-block relative mx-auto">
+                        LET'S CONNECT
+                        <svg class="absolute -bottom-4 left-0 w-full h-4 text-primary-container" fill="none"
+                            preserveaspectratio="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"
+                            viewbox="0 0 100 20">
+                            <path d="M0,10 Q50,0 100,10"></path>
+                        </svg>
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto w-full justify-items-center">
+                    
+                    <a class="group relative flex items-center p-8 bg-floral-white/80 backdrop-blur-md rounded-[32px] border-2 border-card-border shadow-contact-card contact-card-hover overflow-hidden hover:shadow-[0_20px_40px_-5px_rgba(255,106,106,0.3)] w-full max-w-[380px] text-left"
+                        href="https://www.instagram.com/tsc_ctw?fbclid=IwY2xjawSAZA5leHRuA2FlbQIxMABicmlkETFPaGZiZldWM1k5WDlHYnF5c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHtcJD1LxX0CJASlN_ueTmj6DgRD7bYsAV2wpjQmggNBXmWmx4LJqCtU4iioB_aem_MB406wXyBemxwhHMGNqGHQ" target="_blank" id="card-instagram">
+                        <div class="absolute top-4 right-4 text-primary-container opacity-0 transition-opacity group-hover:opacity-100 ig-sparkle">⭐</div>
+                        <div class="w-16 h-16 rounded-full bg-surface flex items-center justify-center mr-6 border border-card-border flex-shrink-0 group-hover:shadow-[0_0_20px_rgba(255,106,106,0.3)] transition-shadow">
+                            <span class="material-symbols-outlined text-4xl text-primary-container">photo_camera</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-2xl text-text-main mb-1">Instagram</h3>
+                            <p class="font-body-md text-sm text-text-muted group-hover:text-primary-container transition-colors">Follow my moments</p>
+                        </div>
+                    </a>
+
+                    <a class="group relative flex items-center p-8 bg-floral-white/80 backdrop-blur-md rounded-[32px] border-2 border-card-border shadow-contact-card contact-card-hover overflow-hidden hover:shadow-[0_20px_40px_-5px_rgba(255,106,106,0.3)] w-full max-w-[380px] text-left"
+                        href="https://www.facebook.com/ctw.0203" target="_blank" id="card-facebook">
+                        <div class="absolute -bottom-4 -right-4 text-4xl opacity-0 fb-flower transition-opacity">🌸</div>
+                        <div class="w-16 h-16 rounded-full bg-surface flex items-center justify-center mr-6 border border-card-border flex-shrink-0">
+                            <span class="material-symbols-outlined text-4xl text-[#1877F2]">groups</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-2xl text-text-main mb-1">Facebook</h3>
+                            <p class="font-body-md text-sm text-text-muted group-hover:text-[#1877F2] transition-colors">Stay connected</p>
+                        </div>
+                    </a>
+
+                    <a class="group relative flex items-center p-8 bg-floral-white/80 backdrop-blur-md rounded-[32px] border-2 border-card-border shadow-contact-card contact-card-hover overflow-hidden hover:shadow-[0_20px_40px_-5px_rgba(255,106,106,0.3)] w-full max-w-[380px] text-left"
+                        href="mailto:cat_tuong_cua_ban@gmail.com" id="card-email">
+                        <div class="w-16 h-16 rounded-full bg-surface flex items-center justify-center mr-6 border border-card-border flex-shrink-0 relative email-note">
+                            <span class="material-symbols-outlined text-4xl text-[#F4B400]">mail</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-2xl text-text-main mb-1">Email</h3>
+                            <p class="font-body-md text-sm text-text-muted group-hover:text-[#F4B400] transition-colors">Send me a message</p>
+                        </div>
+                    </a>
+
+                    <a class="group relative flex items-center p-8 bg-floral-white/80 backdrop-blur-md rounded-[32px] border-2 border-card-border shadow-contact-card contact-card-hover overflow-hidden hover:shadow-[0_20px_40px_-5px_rgba(255,106,106,0.3)] w-full max-w-[380px] text-left"
+                        href="https://www.google.com/maps/place/Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.0642149,105.6294727,8z/data=!3m1!4b1!4m6!3m5!1s0x317529292e8d3dd1:0xf15f5aad773c112b!8m2!3d10.8230989!4d106.6296638!16zL20vMGhuNGg?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" id="card-location">
+                        <div class="absolute top-1/2 right-8 text-2xl loc-dove transition-transform duration-1000">🕊️</div>
+                        <div class="w-16 h-16 rounded-full bg-surface flex items-center justify-center mr-6 border border-card-border flex-shrink-0">
+                            <span class="material-symbols-outlined text-4xl text-[#0F9D58]">location_on</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-2xl text-text-main mb-1">HCM City</h3>
+                            <p class="font-body-md text-sm text-text-muted group-hover:text-[#0F9D58] transition-colors">Vietnam</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full py-12 bg-surface-container-low dark:bg-surface-dim border-t border-outline-variant dark:border-outline relative overflow-hidden">
+        <div class="absolute top-4 left-0 text-3xl pointer-events-none animate-fly-across opacity-70" style="animation-duration: 25s;">🕊️</div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 px-margin-desktop max-w-container-max mx-auto text-center md:text-left relative z-10">
+            <span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">LNCT</span>
+            <ul class="flex gap-4">
+                <li><a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#about">About</a></li>
+                <li><a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#style">Style</a></li>
+                <li><a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#contact">Contact</a></li>
+            </ul>
+            <div class="font-body-md text-body-md text-secondary">
+                Made with 🌼 by Lê Nguyễn Cát Tường
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

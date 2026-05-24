@@ -1,0 +1,318 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary-fixed-dim: #ffb3b0;
+        --on-tertiary-fixed-variant: #005235;
+        --on-tertiary-fixed: #002113;
+        --secondary-fixed: #f2dfd9;
+        --on-surface-variant: #584140;
+        --primary: #ae2f34;
+        --tertiary-container: #00b078;
+        --primary-container: #ff6a6a;
+        --tertiary: #006c48;
+        --error-container: #ffdad6;
+        --surface-container-lowest: #ffffff;
+        --on-tertiary-container: #003a25;
+        --on-secondary-fixed-variant: #504440;
+        --glass-white: rgba(255, 255, 255, 0.60);
+        --on-primary: #ffffff;
+        --surface: #fef9ef;
+        --secondary: #695b57;
+        --on-primary-fixed-variant: #8d141f;
+        --inverse-on-surface: #f5f0e6;
+        --on-error-container: #93000a;
+        --surface-container-high: #ece8de;
+        --on-secondary-fixed: #231916;
+        --on-primary-container: #6c0010;
+        --outline: #8c706f;
+        --inverse-surface: #32302a;
+        --tertiary-fixed-dim: #53dea2;
+        --text-main: #2D2D2D;
+        --outline-variant: #e0bfbd;
+        --notebook-grid: rgba(240, 221, 215, 0.40);
+        --primary-fixed: #ffdad8;
+        --surface-tint: #ae2f34;
+        --surface-bright: #fef9ef;
+        --tertiary-fixed: #73fbbc;
+        --surface-dim: #dedad0;
+        --text-muted: #777777;
+        --secondary-fixed-dim: #d5c3bd;
+        --surface-variant: #e7e2d8;
+        --inverse-primary: #ffb3b0;
+        --surface-container: #f2ede4;
+        --on-primary-fixed: #410006;
+        --error: #ba1a1a;
+        --background: #fef9ef;
+        --surface-container-low: #f8f3e9;
+        --on-error: #ffffff;
+        --on-secondary: #ffffff;
+        --secondary-container: #efdcd6;
+        --on-secondary-container: #6d605b;
+        --on-tertiary: #ffffff;
+        --surface-container-highest: #e7e2d8;
+        --on-background: #1d1c16;
+        --on-surface: #1d1c16;
+        --album-cover: #7BAE7F;
+        --floral-white: #FFFAF0;
+        --card-border: #F0DDD7;
+
+        --margin-mobile: 16px;
+        --margin-desktop: 40px;
+        --container-max: 1200px;
+    }
+}
+
+.font-name-cute {
+    font-family: 'Dancing Script', cursive;
+    font-size: 76px;
+    line-height: 84px;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-transform: none;
+    text-align: center;
+}
+
+.font-headline-lg { font-family: 'Bebas Neue', sans-serif; font-size: 48px; line-height: 52px; font-weight: 400; text-transform: uppercase; }
+.font-headline-md { font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: 36px; font-weight: 400; text-transform: uppercase; }
+.font-display-title { font-family: 'Bebas Neue', sans-serif; font-size: 80px; line-height: 80px; letter-spacing: 0.02em; font-weight: 400; text-transform: uppercase; }
+
+.font-handwritten-note { font-family: 'Caveat', cursive; font-size: 22px; line-height: 26px; font-weight: 500; }
+.font-body-md { font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; font-weight: 400; }
+.font-label-sm { font-family: 'Poppins', sans-serif; font-size: 12px; line-height: 16px; letter-spacing: 0.05em; font-weight: 600; }
+
+.px-margin-desktop { padding-left: var(--margin-desktop); padding-right: var(--margin-desktop); }
+.px-margin-mobile { padding-left: var(--margin-mobile); padding-right: var(--margin-mobile); }
+.max-w-container-max { max-width: var(--container-max); }
+
+.text-primary { color: var(--primary); }
+.text-text-main { color: var(--text-main); }
+.text-text-muted { color: var(--text-muted); }
+.text-primary-container { color: var(--primary-container); }
+.bg-primary-container { background-color: var(--primary-container); }
+.bg-floral-white { background-color: var(--floral-white); }
+.border-card-border { border-color: var(--card-border); }
+.bg-surface-container-high { background-color: var(--surface-container-high); }
+.bg-surface-variant { background-color: var(--surface-variant); }
+
+.shadow-soft-ambient { box-shadow: 0 10px 30px rgba(255, 106, 106, 0.1); }
+.shadow-sticker { box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.shadow-album-spine { box-shadow: inset -5px 0 10px rgba(0,0,0,0.1); }
+.shadow-contact-card { box-shadow: 0 15px 35px -5px rgba(240, 221, 215, 0.5); }
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+body {
+    background-color: var(--background);
+    background-image: linear-gradient(rgba(240, 221, 215, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(240, 221, 215, 0.4) 1px, transparent 1px);
+    background-size: 20px 20px;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   HỆ THỐNG ĐỊNH TỈ LỆ 3D CO GIÃN THEO MÀN HÌNH (ANTI-RESIZE ERROR)
+   ========================================================================== */
+.perspective-1500 { 
+    perspective: 1500px; 
+}
+
+/* Sử dụng clamp() ép chiều rộng cuốn sách tự co giãn tỷ lệ thuận theo màn hình (85vw),
+   nhưng giới hạn tối thiểu là 300px (trên điện thoại siêu nhỏ) và tối đa 680px (trên iPad/Laptop).
+   Tỉ lệ chiều cao luôn tự động tính toán bằng 65% chiều rộng để không bao giờ méo khung.
+*/
+.book-container {
+    position: relative;
+    width: clamp(300px, 85vw, 680px);       
+    height: calc(clamp(300px, 85vw, 680px) * 0.65);      
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    margin: 0 auto;
+}
+
+/* Các trang lót giấy nền tĩnh cố định bên dưới gáy sách */
+.book-page-base-left, .book-page-base-right {
+    position: absolute;
+    top: 0;
+    width: 50%; /* Luôn chiếm chuẩn một nửa cuốn sách bất kể thiết bị nào */      
+    height: 100%;
+    background: #fcf9f0;
+    border: 1px solid var(--card-border);
+    opacity: 0; 
+    pointer-events: none;
+    transform: scale(0.95); 
+    transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.book-page-base-left {
+    left: 0;
+    border-radius: 12px 0 0 12px;
+    border-right: none;
+    transform-origin: right center;
+}
+.book-page-base-right {
+    right: 0;
+    border-radius: 0 12px 12px 0;
+    border-left: none;
+    transform-origin: left center;
+}
+
+/* Trạng thái mở album */
+.album-open-active .book-page-base-left,
+.album-open-active .book-page-base-right {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Trang nội dung hình ảnh lật động và mặt Bìa */
+.album-page, .album-cover {
+    position: absolute;
+    top: 0;
+    right: 0;           
+    width: 50%; /* Khóa chuẩn tỉ lệ 1/2 bề ngang cuốn sổ */      
+    height: 100%;
+    transform-origin: left center; 
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    backface-visibility: hidden;  
+    opacity: 0; 
+    pointer-events: none;
+}
+
+.album-open-active .album-page, 
+.album-open-active .album-cover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.book-container:not(.album-open-active) .album-cover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.album-page {
+    background: #fdfaf2;
+    border: 1px solid var(--card-border);
+    border-left: 3px solid #E0BFBD; 
+    border-radius: 0 12px 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4%; /* Dùng % để khoảng đệm co giãn tự động theo size màn hình */
+}
+
+/* Hiệu ứng lật trang */
+.album-page.page-turned {
+    transform: rotateY(-180deg);
+}
+
+.album-page.page-turned {
+    border-radius: 12px 0 0 12px;
+    border-left: none;
+    border-right: 3px solid #E0BFBD;
+}
+
+/* Khung viền ảnh Polaroid tự co giãn thông minh bên trong trang */
+.polaroid-frame {
+    background: white;
+    padding: 4% 4% 10% 4%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+    width: 80%; /* Luôn ôm gọn gàng bằng 80% diện tích trang giấy, không bị tràn ra ngoài */
+    max-width: 280px;
+}
+
+.sticker {
+    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.1));
+    -webkit-text-stroke: 1px white;
+}
+
+.glass-panel {
+    background: var(--glass-white);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.flower-particle {
+    position: fixed;
+    z-index: 50;
+    pointer-events: none;
+    animation: fall 12s linear infinite;
+}
+
+/* Contact Cards Interaction */
+.contact-card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -5px rgba(255, 106, 106, 0.15);
+}
+
+#card-instagram:hover .ig-sparkle { animation: sparkle 1s ease-in-out forwards; }
+#card-facebook:hover .fb-flower { animation: bloom 1s ease-out forwards; opacity: 1 !important; }
+#card-email:hover .email-note { animation: wiggle 0.5s ease-in-out infinite; }
+#card-location:hover .loc-dove { transform: translateX(50px) translateY(-20px) scale(1.2); opacity: 0; transition: all 1s ease-out; }
+
+/* Spotify Progress Cấu hình & Nhích cụm */
+.group\/player {
+    position: relative;
+    top: -25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#spotify-progress {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(45, 45, 45, 0.1);
+    cursor: pointer;
+    border-radius: 2px;
+    outline: none;
+    transition: background 0.1s ease;
+}
+
+#spotify-progress::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+}
+
+#spotify-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-container);
+    margin-top: -3px;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+.group\/player:hover #spotify-progress::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+.group\/player:hover #spotify-progress {
+    background: linear-gradient(to right, var(--primary-container) 33%, rgba(45, 45, 45, 0.1) 33%);
+}
+
+/* Animations Core */
+.animate-spin-slow { animation: spin 8s linear infinite; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-fly { animation: fly 15s linear infinite; }
+.animate-fall { animation: fall 10s linear infinite; }
+.animate-fly-across { animation: flyAcross 20s linear infinite; }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+@keyframes fly { 0% { transform: translateX(-10vw) translateY(0) rotate(0deg) scale(1); } 25% { transform: translateX(20vw) translateY(-20vh) rotate(-10deg) scale(1.1); } 50% { transform: translateX(50vw) translateY(10vh) rotate(5deg) scale(0.9); } 75% { transform: translateX(80vw) translateY(-15vh) rotate(-5deg) scale(1.05); } 100% { transform: translateX(110vw) translateY(5vh) rotate(0deg) scale(1); } }
+@keyframes flyAcross { 0% { transform: translateX(-100%); } 100% { transform: translateX(100vw); } }
+@keyframes fall { 0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(110vh) rotate(360deg); opacity: 0; } }
+@keyframes sparkle { 0% { transform: scale(0) rotate(0deg); opacity: 1; } 50% { transform: scale(1.5) rotate(180deg); opacity: 1; } 100% { transform: scale(0) rotate(360deg); opacity: 0; } }
+@keyframes bloom { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes wiggle { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+
+/* Loại bỏ hoàn toàn Media Queries cũ phá vỡ kết cấu pixel tĩnh */
