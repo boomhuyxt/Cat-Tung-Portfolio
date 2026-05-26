@@ -53,34 +53,39 @@
                 </a>
             </div>
 
-            <div class="mt-14 bg-white/40 border border-white/40 backdrop-blur-md rounded-xl p-4 w-full max-w-[350px] shadow-[0_10px_25px_rgba(240,221,215,0.6)] group/player transition-all duration-300 hover:-translate-y-1 mx-auto">
-                <div class="flex items-center gap-4 mb-3">
-                    <img alt="Album Art" class="w-14 h-14 rounded-md object-cover shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoJSq18ZRDgKaAcY60DA4iLuJau4aAU6Vh0RALci7jJkIn5fdB9vzJamcJWN0byqVp-zwLbuBhE_xHzWkfAcQ0aYtKpvdtMbTLt7iyjNOFBEARz-AyH0yvVaRkZMYiTgQFrGJtkRGLvjJjLdD8Y-Vw-dL6dMtnOXpctFxKpTnNNVlJgFvedqErcpo0QLOeUuoYqM5yLkzjXkchIr9Oaoi2_dbg_8f_8K2dgG-QeXNVjecQinMEd_dmGfa6Ot_K1mnTaStP5XcVvMWR"/>
-                    <div class="flex-grow text-left min-w-0">
-                        <h4 class="text-text-main text-sm font-semibold truncate hover:underline cursor-pointer">Midnight Focus</h4>
-                        <p class="text-text-muted text-xs truncate hover:text-text-main hover:underline cursor-pointer">Study Playlist</p>
-                    </div>
-                    <button class="text-text-muted hover:text-primary-container transition-colors flex-shrink-0">
-                        <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 0, 'wght' 300;">favorite</span>
-                    </button>
-                </div>
-                
-                <div class="flex flex-col gap-2">
-                    <div class="flex justify-center items-center gap-3 text-text-main">
-                        <button class="hover:text-primary-container transition-colors p-1" id="backward-10s" title="Tua lùi 10s"><span class="material-symbols-outlined text-xl">replay_10</span></button>
-                        <button class="hover:text-primary-container transition-colors p-1" title="Bài trước"><span class="material-symbols-outlined text-xl">skip_previous</span></button>
-                        <button class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-200 shadow-sm" title="Play"><span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1, 'wght' 500;">play_arrow</span></button>
-                        <button class="hover:text-primary-container transition-colors p-1" title="Bài tiếp theo"><span class="material-symbols-outlined text-xl">skip_next</span></button>
-                        <button class="hover:text-primary-container transition-colors p-1" id="forward-10s" title="Tua tiến 10s"><span class="material-symbols-outlined text-xl">forward_10</span></button>
-                    </div>
-                    <div class="flex items-center gap-2 text-[10px] text-text-muted font-mono select-none">
-                        <span>0:45</span>
-                        <input type="range" id="spotify-progress" class="w-full h-[4px]" min="0" max="100" value="33">
-                        <span>3:12</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+<audio id="audio-player" src=""></audio>
+
+<div class="mt-14 bg-white/40 border border-white/40 backdrop-blur-md rounded-xl p-4 w-full max-w-[350px] shadow-[0_10px_25px_rgba(240,221,215,0.6)] group/player transition-all duration-300 hover:-translate-y-1 mx-auto">
+    <div class="flex items-center gap-4 mb-3">
+        <img id="player-cover" alt="Album Art" class="w-14 h-14 rounded-md object-cover shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoJSq18ZRDgKaAcY60DA4iLuJau4aAU6Vh0RALci7jJkIn5fdB9vzJamcJWN0byqVp-zwLbuBhE_xHzWkfAcQ0aYtKpvdtMbTLt7iyjNOFBEARz-AyH0yvVaRkZMYiTgQFrGJtkRGLvjJjLdD8Y-Vw-dL6dMtnOXpctFxKpTnNNVlJgFvedqErcpo0QLOeUuoYqM5yLkzjXkchIr9Oaoi2_dbg_8f_8K2dgG-QeXNVjecQinMEd_dmGfa6Ot_K1mnTaStP5XcVvMWR"/>
+        <div class="flex-grow text-left min-w-0">
+            <h4 id="player-title" class="text-text-main text-sm font-semibold truncate hover:underline cursor-pointer">Midnight Focus</h4>
+            <p id="player-artist" class="text-text-muted text-xs truncate hover:text-text-main hover:underline cursor-pointer">Study Playlist</p>
+        </div>
+        <button class="text-text-muted hover:text-primary-container transition-colors flex-shrink-0">
+            <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 0, 'wght' 300;">favorite</span>
+        </button>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+        <div class="flex justify-center items-center gap-3 text-text-main">
+            <button class="hover:text-primary-container transition-colors p-1" id="backward-10s" title="Tua lùi 10s"><span class="material-symbols-outlined text-xl">replay_10</span></button>
+            <button class="hover:text-primary-container transition-colors p-1" id="prev-btn" title="Bài trước"><span class="material-symbols-outlined text-xl">skip_previous</span></button>
+            
+            <button id="play-btn" class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-200 shadow-sm" title="Play">
+                <span id="play-icon" class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1, 'wght' 500;">play_arrow</span>
+            </button>
+            
+            <button class="hover:text-primary-container transition-colors p-1" id="next-btn" title="Bài tiếp theo"><span class="material-symbols-outlined text-xl">skip_next</span></button>
+            <button class="hover:text-primary-container transition-colors p-1" id="forward-10s" title="Tua tiến 10s"><span class="material-symbols-outlined text-xl">forward_10</span></button>
+        </div>
+        <div class="flex items-center gap-2 text-[10px] text-text-muted font-mono select-none">
+            <span id="current-time">0:00</span>
+            <input type="range" id="spotify-progress" class="w-full h-[4px] accent-primary-container cursor-pointer" min="0" max="100" value="0">
+            <span id="total-duration">0:00</span>
+        </div>
+    </div>
+</div>
 
         <section class="py-20 relative bg-floral-white bg-notebook-pattern bg-[length:20px_20px] rounded-3xl shadow-soft-ambient mb-32 w-full text-center flex flex-col items-center justify-center" id="about">
             <div class="max-w-3xl mx-auto px-8 flex flex-col items-center justify-center gap-8 relative z-10 w-full">

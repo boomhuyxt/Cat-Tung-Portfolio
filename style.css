@@ -119,10 +119,6 @@ body {
     perspective: 1500px; 
 }
 
-/* Sử dụng clamp() ép chiều rộng cuốn sách tự co giãn tỷ lệ thuận theo màn hình (85vw),
-   nhưng giới hạn tối thiểu là 300px (trên điện thoại siêu nhỏ) và tối đa 680px (trên iPad/Laptop).
-   Tỉ lệ chiều cao luôn tự động tính toán bằng 65% chiều rộng để không bao giờ méo khung.
-*/
 .book-container {
     position: relative;
     width: clamp(300px, 85vw, 680px);       
@@ -132,11 +128,10 @@ body {
     margin: 0 auto;
 }
 
-/* Các trang lót giấy nền tĩnh cố định bên dưới gáy sách */
 .book-page-base-left, .book-page-base-right {
     position: absolute;
     top: 0;
-    width: 50%; /* Luôn chiếm chuẩn một nửa cuốn sách bất kể thiết bị nào */      
+    width: 50%;      
     height: 100%;
     background: #fcf9f0;
     border: 1px solid var(--card-border);
@@ -159,19 +154,17 @@ body {
     transform-origin: left center;
 }
 
-/* Trạng thái mở album */
 .album-open-active .book-page-base-left,
 .album-open-active .book-page-base-right {
     opacity: 1;
     transform: scale(1);
 }
 
-/* Trang nội dung hình ảnh lật động và mặt Bìa */
 .album-page, .album-cover {
     position: absolute;
     top: 0;
-    right: 0;           
-    width: 50%; /* Khóa chuẩn tỉ lệ 1/2 bề ngang cuốn sổ */      
+    right: 0;          
+    width: 50%;      
     height: 100%;
     transform-origin: left center; 
     transform-style: preserve-3d;
@@ -200,10 +193,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4%; /* Dùng % để khoảng đệm co giãn tự động theo size màn hình */
+    padding: 4%;
 }
 
-/* Hiệu ứng lật trang */
 .album-page.page-turned {
     transform: rotateY(-180deg);
 }
@@ -214,14 +206,13 @@ body {
     border-right: 3px solid #E0BFBD;
 }
 
-/* Khung viền ảnh Polaroid tự co giãn thông minh bên trong trang */
 .polaroid-frame {
     background: white;
     padding: 4% 4% 10% 4%;
     box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     position: relative;
     border: 1px solid rgba(0,0,0,0.03);
-    width: 80%; /* Luôn ôm gọn gàng bằng 80% diện tích trang giấy, không bị tràn ra ngoài */
+    width: 80%;
     max-width: 280px;
 }
 
@@ -257,7 +248,9 @@ body {
 #card-email:hover .email-note { animation: wiggle 0.5s ease-in-out infinite; }
 #card-location:hover .loc-dove { transform: translateX(50px) translateY(-20px) scale(1.2); opacity: 0; transition: all 1s ease-out; }
 
-/* Spotify Progress Cấu hình & Nhích cụm */
+/* ==========================================================================
+   CẤU HÌNH TRÌNH PHÁT NHẠC (SPOTIFY PLAYER) - ĐƯỜNG KẺ CHẠY THEO NHẠC
+   ========================================================================== */
 .group\/player {
     position: relative;
     top: -25px;
@@ -266,38 +259,46 @@ body {
 }
 
 #spotify-progress {
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* Khóa giao diện mặc định của Chrome/Safari */
     appearance: none;
-    background: rgba(45, 45, 45, 0.1);
-    cursor: pointer;
-    border-radius: 2px;
-    outline: none;
-    transition: background 0.1s ease;
-}
-
-#spotify-progress::-webkit-slider-runnable-track {
     width: 100%;
     height: 4px;
+    border-radius: 9999px;
+    outline: none;
+    cursor: pointer;
+    /* Giá trị ban đầu khi chưa bấm phát nhạc */
+    background: linear-gradient(to right, #ff6a6a 0%, #e5e7eb 0%);
 }
 
+/* Kiểu dáng cho nút tròn kéo trên Chrome, Safari, Opera và Edge */
 #spotify-progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--primary-container);
-    margin-top: -3px;
-    opacity: 0;
-    transition: opacity 0.1s ease;
+    background: #ff6a6a; 
+    cursor: pointer;
+    transition: transform 0.1s ease;
 }
 
-.group\/player:hover #spotify-progress::-webkit-slider-thumb {
-    opacity: 1;
+/* Kiểu dáng cho nút tròn kéo trên Firefox */
+#spotify-progress::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: #ff6a6a;
+    cursor: pointer;
+    transition: transform 0.1s ease;
 }
 
-.group\/player:hover #spotify-progress {
-    background: linear-gradient(to right, var(--primary-container) 33%, rgba(45, 45, 45, 0.1) 33%);
+/* Tạo hiệu ứng phóng to nút tròn nhẹ khi hover chuột vào thanh nhạc */
+#spotify-progress:hover::-webkit-slider-thumb {
+    transform: scale(1.3);
+}
+#spotify-progress:hover::-moz-range-thumb {
+    transform: scale(1.3);
 }
 
 /* Animations Core */
@@ -314,5 +315,3 @@ body {
 @keyframes sparkle { 0% { transform: scale(0) rotate(0deg); opacity: 1; } 50% { transform: scale(1.5) rotate(180deg); opacity: 1; } 100% { transform: scale(0) rotate(360deg); opacity: 0; } }
 @keyframes bloom { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 @keyframes wiggle { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
-
-/* Loại bỏ hoàn toàn Media Queries cũ phá vỡ kết cấu pixel tĩnh */
