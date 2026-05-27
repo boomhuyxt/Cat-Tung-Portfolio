@@ -65,16 +65,50 @@
     }
 }
 
+
+/* ==========================================================================
+   HỆ THỐNG HIỆU ỨNG CHỮ UỐN LƯỢN SÓNG BIỂN LIÊN TỤC (TEXT WAVE LOOP)
+   ========================================================================== */
 .font-name-cute {
-    font-family: 'Dancing Script', cursive;
-    font-size: 76px;
-    line-height: 84px;
-    font-weight: 700;
-    letter-spacing: normal;
+    font-family: 'Coiny', cursive !important; /* Chỉ định font Coiny béo mập */
+    font-size: 54px; /* Size chữ 54px lý tưởng cho màn hình desktop */
+    line-height: 1.2;
+    letter-spacing: 0.04em !important;
     text-transform: none;
     text-align: center;
+    color: #ff6a6a !important;
 }
 
+/* Cấu hình cho từng ký tự span chuyển động nhịp nhàng */
+.font-wave-container span {
+    position: relative;
+    display: inline-block;
+    /* Gọi animation wavy chạy trong 1.4 giây, lặp vô hạn, mượt mà ở hai đầu */
+    animation: wavy 1.4s ease-in-out infinite;
+    /* Dựa vào biến --i khai báo ở HTML để tính toán độ trễ, chữ sau đuổi theo chữ trước */
+    animation-delay: calc(0.09s * var(--i));
+}
+
+/* Định nghĩa quy luật chuyển động sóng biển: Nhô lên, hạ xuống và quay về vị trí cũ */
+@keyframes wavy {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-22px); /* Độ cao con sóng nhô lên (bạn có thể chỉnh nếu muốn lượn mạnh hơn) */
+    }
+}
+
+/* Tối ưu responsive: Trên màn hình điện thoại, tự động thu nhỏ size chữ để không bị tràn dòng */
+@media (max-w: 640px) {
+    .font-name-cute {
+        font-size: 36px;
+    }
+    @keyframes wavy {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-14px); } /* Sóng thấp hơn một chút trên mobile để cân đối */
+    }
+}
 .font-headline-lg { font-family: 'Bebas Neue', sans-serif; font-size: 48px; line-height: 52px; font-weight: 400; text-transform: uppercase; }
 .font-headline-md { font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: 36px; font-weight: 400; text-transform: uppercase; }
 .font-display-title { font-family: 'Bebas Neue', sans-serif; font-size: 80px; line-height: 80px; letter-spacing: 0.02em; font-weight: 400; text-transform: uppercase; }

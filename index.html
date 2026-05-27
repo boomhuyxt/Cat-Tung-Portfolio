@@ -7,9 +7,10 @@
     <title>Cát Tường - Portfolio</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+    
+    <!-- Nhúng font Coiny hỗ trợ tiếng Việt từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
 
@@ -45,13 +46,49 @@
                     <path d="M10,50 Q30,10 50,50 T90,50"></path>
                 </svg>
             </div>
-            <div class="space-y-4 flex flex-col items-center justify-center">
-                <h1 class="font-name-cute text-text-main text-center">Lê Nguyễn Cát Tường</h1>
-                <p class="font-handwritten-note text-handwritten-note text-primary-container rotate-[-2deg] text-center">Economic Mathematics</p>
-                <a class="inline-block mt-6 px-8 py-3 bg-primary-container text-white font-label-sm text-label-sm rounded-full shadow-soft-ambient hover:scale-105 transition-transform duration-300 mx-auto" href="#explore">
-                    Explore →
-                </a>
-            </div>
+            
+<!-- Cụm chữ Lê Nguyễn Cát Tường uốn lượn từng chữ như sóng biển liên tục -->
+<div class="w-full flex justify-center items-center py-6 select-none">
+    <h1 class="font-name-cute text-[#ff6a6a] flex flex-wrap justify-center font-wave-container">
+        <!-- Từ: Lê -->
+        <span style="--i:1">L</span>
+        <span style="--i:2">ê</span>
+        
+        <span class="w-4"></span> <!-- Khoảng trắng giữa các từ -->
+        
+        <!-- Từ: Nguyễn -->
+        <span style="--i:3">N</span>
+        <span style="--i:4">g</span>
+        <span style="--i:5">u</span>
+        <span style="--i:6">y</span>
+        <span style="--i:7">ễ</span>
+        <span style="--i:8">n</span>
+        
+        <span class="w-4"></span> <!-- Khoảng trắng giữa các từ -->
+        
+        <!-- Từ: Cát -->
+        <span style="--i:9">C</span>
+        <span style="--i:10">á</span>
+        <span style="--i:11">t</span>
+        
+        <span class="w-4"></span> <!-- Khoảng trắng giữa các từ -->
+        
+        <!-- Từ: Tường -->
+        <span style="--i:12">T</span>
+        <span style="--i:13">ư</span>
+        <span style="--i:14">ờ</span>
+        <span style="--i:15">n</span>
+        <span style="--i:16">g</span>
+    </h1>
+</div>
+
+<div class="space-y-4 flex flex-col items-center justify-center -mt-2">
+    <!-- ĐÃ CẬP NHẬT: Thay thế class 'text-primary-container' thành 'text-black' để đổi dòng chữ sang màu đen -->
+    <p class="font-handwritten-note text-handwritten-note text-black rotate-[-2deg] text-center">Economic Mathematics</p>
+    <a class="inline-block mt-6 px-8 py-3 bg-primary-container text-white font-label-sm text-label-sm rounded-full shadow-soft-ambient hover:scale-105 transition-transform duration-300 mx-auto" href="#explore">
+        Explore →
+    </a>
+</div>
 
 <audio id="audio-player" src=""></audio>
 
@@ -94,21 +131,55 @@
                 <div class="absolute top-1/2 left-10 text-3xl sticker animate-fly" style="animation-delay: 0.5s;">🕊️</div>
                 <div class="absolute bottom-10 left-10 text-4xl sticker animate-float" style="animation-delay: 2s;">🌸</div>
 
-                <div class="space-y-6 flex flex-col items-center text-center w-full">
-                    <h2 class="font-headline-lg text-headline-lg text-text-main inline-block relative mx-auto">
-                        ABOUT ME 📚
-                        <svg class="absolute -bottom-2 left-0 w-full h-3 text-primary-container opacity-60" fill="none" preserveaspectratio="none" stroke="currentColor" stroke-linecap="round" stroke-width="4" viewbox="0 0 100 20">
-                            <path d="M0,10 Q50,0 100,10"></path>
-                        </svg>
-                    </h2>
-                    <h3 class="font-name-cute text-4xl text-primary-container text-center">Lê Nguyễn Cát Tường</h3>
-                    <p class="font-handwritten-note text-2xl text-text-muted text-center">Economic Mathematics</p>
-                    <p class="font-body-md text-text-main leading-relaxed max-w-2xl text-center mx-auto">
-                        Hello! I'm an Economic Mathematics student passionate about blending analytical thinking with a soft, creative aesthetic. I believe that even the most complex equations can be beautiful when viewed from the right perspective. Welcome to my little corner of the internet where logic meets art.
-                    </p>
-                </div>
-            </div>
-        </section>
+<div class="space-y-6 flex flex-col items-center text-center w-full">
+    <h2 class="font-headline-lg text-headline-lg text-text-main inline-block relative mx-auto">
+        ABOUT ME 📚
+        <svg class="absolute -bottom-2 left-0 w-full h-3 text-primary-container opacity-60" fill="none" preserveaspectratio="none" stroke="currentColor" stroke-linecap="round" stroke-width="4" viewbox="0 0 100 20">
+            <path d="M0,10 Q50,0 100,10"></path>
+        </svg>
+    </h2>
+
+    <!-- ĐÃ SỬA: Xóa dấu mọc nhọn lặp << và bỏ class màu thừa để nhận chuẩn màu từ file CSS -->
+    <div class="w-full flex justify-center items-center py-4 select-none">
+        <h3 class="font-name-cute flex flex-wrap justify-center font-wave-container">
+            <!-- Từ: Lê -->
+            <span style="--i:1">L</span>
+            <span style="--i:2">ê</span>
+            
+            <span class="w-4"></span> <!-- Khoảng trắng giữa các từ -->
+            
+            <!-- Từ: Nguyễn -->
+            <span style="--i:3">N</span>
+            <span style="--i:4">g</span>
+            <span style="--i:5">u</span>
+            <span style="--i:6">y</span>
+            <span style="--i:7">ễ</span>
+            <span style="--i:8">n</span>
+            
+            <span class="w-4"></span> <!-- Khoảng trắng giữa các từ -->
+            
+            <!-- Từ: Cát -->
+            <span style="--i:9">C</span>
+            <span style="--i:10">á</span>
+            <span style="--i:11">t</span>
+            
+            <span class="w-4"></span> <!-- Khoảng trắng giữa các từ -->
+            
+            <!-- Từ: Tường -->
+            <span style="--i:12">T</span>
+            <span style="--i:13">ư</span>
+            <span style="--i:14">ờ</span>
+            <span style="--i:15">n</span>
+            <span style="--i:16">g</span>
+        </h3>
+    </div>
+
+    <!-- ĐÃ SỬA: Đổi màu dòng chữ phụ thành màu đen chuẩn chỉnh -->
+    <p class="font-handwritten-note text-2xl text-black text-center">Economic Mathematics</p>
+    <p class="font-body-md text-text-main leading-relaxed max-w-2xl text-center mx-auto">
+        Hello! I'm an Economic Mathematics student passionate about blending analytical thinking with a soft, creative aesthetic. I believe that even the most complex equations can be beautiful when viewed from the right perspective. Welcome to my little corner of the internet where logic meets art.
+    </p>
+</div>
 
         <section class="py-20 relative w-full text-center flex flex-col items-center justify-center overflow-hidden" id="style">
             <div class="text-center mb-12 relative z-10 w-full">
@@ -245,7 +316,7 @@
                 <li><a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#contact">Contact</a></li>
             </ul>
             <div class="font-body-md text-body-md text-secondary">
-                Made with 🌻 by <a href="https://gia-huy-portfolio.vercel.app/" target="_blank" class="footer-name-link">boomhuyxt(GIA HUY)</a>
+                Made with 🌼 by <a href="https://gia-huy-portfolio.vercel.app/" target="_blank" class="footer-name-link">boomhuyxt(GIA HUY)</a>
             </div>
         </div>
     </footer>
