@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const playlist = [
         {
-            title: "Midnight Focus",
-            artist: "Study Playlist",
+            title: "A Little Dream Of Me",
+            artist: "Công Dương, Nguyễn Lâm Thảo Tâm, & 30 Pictures",
             src: "music/Công Dương, Nguyễn Lâm Thảo Tâm, & 30 Pictures - A Little Dream Of Me (Original Soundtrack).mp3", 
             cover: "music/A Little Dream Of Me.jpg" 
         },
